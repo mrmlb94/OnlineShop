@@ -1,0 +1,13 @@
+20251021 :
+The project was made to connect a Spring Boot application with MongoDB that runs inside a Docker container.
+MongoDB is controlled using Docker Compose, and it opens port 27017 so the app can use it.
+The Maven exec plugin was set up to start and stop the MongoDB container during certain build steps.
+However, when running the app directly from the IDE, I found that MongoDB must be started manually using docker-compose up -d before starting the app.
+Doing this makes sure the database is ready and reachable on localhost.
+At first, the app showed a 404 error on the main page because there was no controller or HTML page for that path.
+To fix it, I added Thymeleaf as the view template engine.
+I created a simple index.html file inside the src/main/resources/templates folder and a controller in Spring MVC that connects the root URL ("/") to this page.
+After that, the app could show proper HTML pages using Thymeleaf.
+Now, the app works well with MongoDB running in Docker and Thymeleaf for web pages.
+Although MongoDB could be started automatically by changing the Maven setup or using Testcontainers for testing, the current manual method is easy and reliable.
+The project is ready to grow with more Thymeleaf pages or better Docker settings in the future.
