@@ -1,0 +1,73 @@
+# === Large Binary Files ===
+google-chrome-stable_current_amd64.deb
+chromedriver-linux64/
+.DS_Store
+*/.DS_Store
+*HELP.*
+*.iml
+
+
+# === Build and Generated Files ===
+target/
+build/
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+.mvn/wrapper/maven-wrapper.jar
+/htmlReport
+
+
+# === IDEs ===
+## IntelliJ IDEA
+.idea/
+*.iws
+*.ipr
+
+## Eclipse / STS (Spring Tool Suite)
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
+#.classpath
+#.project
+!.settings/
+
+## NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+## VS Code
+.vscode/
+
+
+# === Node.js ===
+node_modules/
+
+
+# === Logs ===
+*.log
+
+
+# === Docker Files (Keep these) ===
+!Dockerfile
+!docker-compose.yml
+
+
+# === Sensitive Data ===
+.env
+render.yaml
+
+
+# === OS Generated Files ===
+Thumbs.db
+Desktop.ini
+
+
+# === Java & Maven ===
+*.class
+*.jar
+!**/wrapper/*.jar
