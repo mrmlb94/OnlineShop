@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  skip:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Skipping"
