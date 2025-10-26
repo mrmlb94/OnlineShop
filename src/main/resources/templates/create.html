@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Shop Item</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+</head>
+<body style="background-color:lavender;">
+<h1 style="text-align:center; color:#6A5ACD;">Add New Shop Item</h1>
+<fieldset style="margin:auto; width:50%; padding:20px; border:3px solid #C8A2C8; background-color:#F6F3FF;">
+    <legend style="font-weight:bold; color:#6A5ACD;">New Item Details</legend>
+    <form th:action="@{/items}" th:object="${shopItem}" method="post">
+        <p>
+            <label for="createName" style="color:#593D88;">Name:</label><br>
+            <input id="createName" type="text" th:field="*{name}" required style="width:100%; border:1px solid #B39EB5; background-color:#E6E6FA;">
+        </p>
+        <p>
+            <label for="createDescription" style="color:#593D88;">Description:</label><br>
+            <textarea id="createDescription" th:field="*{description}" required style="width:100%; height:80px; border:1px solid #C8A2C8; background-color:#E6E6FA;"></textarea>
+        </p>
+        <p>
+            <label for="createPrice" style="color:#593D88;">Price:</label><br>
+            <input id="createPrice" type="number" th:field="*{price}" step="0.01" required style="width:100%; border:1px solid #B39EB5; background-color:#E6E6FA;">
+        </p>
+        <p>
+            <label for="createQuantity" style="color:#593D88;">Quantity:</label><br>
+            <input id="createQuantity" type="number" th:field="*{quantity}" required style="width:100%; border:1px solid #B39EB5; background-color:#E6E6FA;">
+        </p>
+        <p style="text-align:center;">
+            <button type="submit" style="padding:8px 16px; background-color:#6A5ACD; color:white; border-radius:6px; border:none;">
+                Create
+            </button>
+        </p>
+    </form>
+</fieldset>
+<p style="text-align:center; margin-top:20px;">
+    <a th:href="@{/items}"
+       style="display:inline-block; padding:8px 16px; background-color:#6A5ACD; color:white; border-radius:6px; border:none; text-decoration:none; text-align:center;">
+        Back to List
+    </a>
+</p>
+</body>
+</html>

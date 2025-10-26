@@ -11,3 +11,11 @@ After that, the app could show proper HTML pages using Thymeleaf.
 Now, the app works well with MongoDB running in Docker and Thymeleaf for web pages.
 Although MongoDB could be started automatically by changing the Maven setup or using Testcontainers for testing, the current manual method is easy and reliable.
 The project is ready to grow with more Thymeleaf pages or better Docker settings in the future.
+
+20251024 :
+I extended the project by adding full CRUD functionality for managing shop items.
+I created an entity class named ShopItem and implemented a MongoDB repository to handle database operations.
+Then, I built a controller that connects the backend logic to Thymeleaf templates, allowing users to view, add, edit, and delete items through a simple web interface.
+I also added the corresponding HTML templates to support these operations and tested the integration between the controller and MongoDB.
+During the process, I resolved issues related to bean injection and repository configuration to ensure smooth data flow between the application and the database.
+Now, the application provides a complete and functional shop management system.

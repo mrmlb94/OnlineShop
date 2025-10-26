@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Shop Item Details</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+</head>
+<body style="background-color:lavender;">
+<h1 style="text-align:center; color:#6A5ACD;">Shop Item Details</h1>
+
+<fieldset style="margin:auto; width:60%; padding:20px; border:3px solid #C8A2C8; background-color:#F6F3FF;">
+    <legend style="font-weight:bold; color:#6A5ACD;">Item Info</legend>
+    <p><b style="color:#593D88;">Name:</b> <span th:text="${shopItem.name}" style="color:#6A5ACD;"></span></p>
+    <p><b style="color:#593D88;">Description:</b> <span th:text="${shopItem.description}" style="color:#6A5ACD;"></span></p>
+    <p><b style="color:#593D88;">Price:</b> <span th:text="${shopItem.price}" style="color:#6A5ACD;"></span></p>
+    <p><b style="color:#593D88;">Quantity:</b> <span th:text="${shopItem.quantity}" style="color:#6A5ACD;"></span></p>
+</fieldset>
+
+<p style="text-align:center; margin-top:20px;">
+    <a th:href="@{/items}" style="color:#6A5ACD; text-decoration:underline;">Back to List</a> |
+    <a th:href="@{/items/{id}/edit(id=${shopItem.id})}" style="color:#6A5ACD; text-decoration:underline;">Edit</a>
+</p>
+</body>
+</html>
